@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import org.apache.commons.lang.StringUtils;
 
 import com.smt.poker.util.BigDecimalUtils;
@@ -13,7 +17,10 @@ import com.smt.poker.util.BigDecimalUtils;
  * Represents a hand
  * @author Mingtao Sun
  */
+//@Entity
+//@Table(name="T_HAND")
 public class Hand {
+	//@Id
 	/** Id of the hand */
 	private final String id;
 	/** Date and time of the hand */

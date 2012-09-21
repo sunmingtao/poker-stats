@@ -1,6 +1,15 @@
 package com.smt.poker.domain.hand;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.TableGenerator;
 
 import com.smt.poker.util.BigDecimalUtils;
 
@@ -8,18 +17,36 @@ import com.smt.poker.util.BigDecimalUtils;
  * Represents a player
  * @author Mingtao Sun
  */
+@Entity
+@Table(name="T_PLAYER")
 public class Player {
+	@Id
+	@GeneratedValue(strategy=GenerationType.TABLE, generator="PLAYER_GENERATOR")
+	@TableGenerator(name="PLAYER_GENERATOR", initialValue=1, allocationSize=1)
+	private BigInteger id;
+	
 	/** Player's name */
+	@Column(name="NAME")
 	private final String name;
+	
 	/** Amount paid at preflop */
+	@Column(name="PREFLOP_AMOUNT", precision=5, scale=2)
 	private BigDecimal preflopAmount = BigDecimal.ZERO;
+	
 	/** Amount paid at flop */
+	@Column(name="FLOP_AMOUNT", precision=5, scale=2)
 	private BigDecimal flopAmount = BigDecimal.ZERO;
+	
 	/** Amount paid at turn */
+	@Column(name="TURN_AMOUNT", precision=5, scale=2)
 	private BigDecimal turnAmount = BigDecimal.ZERO;
+	
 	/** Amount paid at river */
+	@Column(name="RIVER_AMOUNT", precision=5, scale=2)
 	private BigDecimal riverAmount = BigDecimal.ZERO;
+	
 	/** Amount collected from pot */
+	@Column(name="WIN_AMOUNT", precision=5, scale=2)
 	private BigDecimal winAmount = BigDecimal.ZERO;
 	
 	/**
@@ -121,6 +148,14 @@ public class Player {
 	/************************ Standard Getters *************************/
 	public String getName() {
 		return name;
+	}
+
+	public BigInteger getId() {
+		return id;
+	}
+
+	public void setId(BigInteger id) {
+		this.id = id;
 	}
 
 	public BigDecimal getPreflopAmount() {
