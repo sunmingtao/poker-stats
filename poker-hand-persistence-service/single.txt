@@ -1,0 +1,116 @@
+PokerStars Game #24445211557:  Hold'em No Limit ($0.01/$0.02) - 2009/01/30 21:01:46 ET
+Table 'Adalberta III' 9-max Seat #8 is the button
+Seat 1: Gambler HA ($5.55 in chips) 
+Seat 2: Philip Am ($1 in chips) 
+Seat 3: ez.ronen ($1.98 in chips) 
+Seat 4: mariam73 ($1.08 in chips) 
+Seat 5: sunmt ($2 in chips) 
+Seat 6: naturnerhart ($2.73 in chips) 
+Seat 7: xxhewkoxx ($2.53 in chips) 
+Seat 8: tranemaster ($3.69 in chips) 
+Vastberaden will be allowed to play after the button
+Gambler HA: posts small blind $0.01
+Philip Am: posts big blind $0.02
+sunmt: posts big blind $0.02
+*** HOLE CARDS ***
+Dealt to sunmt [9h Ks]
+ez.ronen: folds 
+Gambler HA said, "jo kurhaut"
+mariam73: folds 
+sunmt: checks 
+naturnerhart: calls $0.02
+xxhewkoxx: folds 
+tranemaster: folds 
+Gambler HA: folds 
+Philip Am: checks 
+*** FLOP *** [5h 8d Jd]
+Philip Am: checks 
+sunmt: checks 
+naturnerhart: checks 
+*** TURN *** [5h 8d Jd] [4h]
+Philip Am: checks 
+sunmt: checks 
+naturnerhart: checks 
+*** RIVER *** [5h 8d Jd 4h] [Ad]
+Philip Am: checks 
+sunmt: checks 
+naturnerhart: checks 
+*** SHOW DOWN ***
+Philip Am: shows [6d 3s] (high card Ace)
+sunmt: shows [9h Ks] (high card Ace - King kicker)
+naturnerhart: shows [6c 8c] (a pair of Eights)
+naturnerhart collected $0.07 from pot
+*** SUMMARY ***
+Total pot $0.07 | Rake $0 
+Board [5h 8d Jd 4h Ad]
+Seat 1: Gambler HA (small blind) folded before Flop
+Seat 2: Philip Am (big blind) showed [6d 3s] and lost with high card Ace
+Seat 3: ez.ronen folded before Flop (didn't bet)
+Seat 4: mariam73 folded before Flop (didn't bet)
+Seat 5: sunmt showed [9h Ks] and lost with high card Ace
+Seat 6: naturnerhart showed [6c 8c] and won ($0.07) with a pair of Eights
+Seat 7: xxhewkoxx folded before Flop (didn't bet)
+Seat 8: tranemaster (button) folded before Flop (didn't bet)
+
+PokerStars Game #24445252289:  Hold'em No Limit ($0.01/$0.02) - 2009/01/30 21:03:14 ET
+Table 'Adalberta III' 9-max Seat #1 is the button
+Seat 1: Gambler HA ($5.54 in chips) 
+Seat 2: Philip Am ($1 in chips) 
+Seat 3: ez.ronen ($1.98 in chips) 
+Seat 4: mariam73 ($1.08 in chips) 
+Seat 5: sunmt ($1.98 in chips) 
+Seat 6: naturnerhart ($2.78 in chips) 
+Seat 7: xxhewkoxx ($2.53 in chips) 
+Seat 8: tranemaster ($3.69 in chips) 
+Seat 9: Vastberaden ($1 in chips) 
+Philip Am: posts small blind $0.01
+ez.ronen: posts big blind $0.02
+Vastberaden: posts small & big blinds $0.03
+*** HOLE CARDS ***
+Dealt to sunmt [8c 6s]
+mariam73: calls $0.02
+sunmt: folds 
+naturnerhart: calls $0.02
+xxhewkoxx: folds 
+tranemaster: folds 
+Vastberaden: checks 
+Gambler HA: calls $0.02
+Philip Am: calls $0.01
+ez.ronen: checks 
+*** FLOP *** [2h Qd Jh]
+Philip Am: checks 
+ez.ronen: bets $0.02
+mariam73: calls $0.02
+naturnerhart: folds 
+Vastberaden: folds 
+Vastberaden leaves the table
+Gambler HA: raises $0.08 to $0.10
+Philip Am: folds 
+ez.ronen: calls $0.08
+sapopez joins the table at seat #9 
+mariam73: calls $0.08
+*** TURN *** [2h Qd Jh] [Ts]
+ez.ronen: checks 
+mariam73: checks 
+Gambler HA: bets $0.06
+ez.ronen: calls $0.06
+mariam73: folds 
+*** RIVER *** [2h Qd Jh Ts] [Ad]
+ez.ronen: checks 
+Gambler HA: checks 
+*** SHOW DOWN ***
+ez.ronen: shows [2d Qh] (two pair, Queens and Deuces)
+Gambler HA: mucks hand 
+ez.ronen collected $0.55 from pot
+*** SUMMARY ***
+Total pot $0.55 | Rake $0 
+Board [2h Qd Jh Ts Ad]
+Seat 1: Gambler HA (button) mucked [Qc 6h]
+Seat 2: Philip Am (small blind) folded on the Flop
+Seat 3: ez.ronen (big blind) showed [2d Qh] and won ($0.55) with two pair, Queens and Deuces
+Seat 4: mariam73 folded on the Turn
+Seat 5: sunmt folded before Flop (didn't bet)
+Seat 6: naturnerhart folded on the Flop
+Seat 7: xxhewkoxx folded before Flop (didn't bet)
+Seat 8: tranemaster folded before Flop (didn't bet)
+Seat 9: Vastberaden folded on the Flop
