@@ -5,6 +5,8 @@ import java.math.BigDecimal;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -31,16 +33,12 @@ public class Action {
 	@ManyToOne(cascade=CascadeType.MERGE)
 	@JoinColumn(name="F_PLAYER_ID")
 	private Player player;
-	
-	@Column(name="STREET_ID")
-	private int street;
-	
 	/** 
 	 * Player's move in this action
 	 * e.g. folds/checks/bets/calls/raises 
 	 */
-	@Column(name = "MOVE_ID")
-	private int move;
+	@Enumerated(EnumType.STRING)
+	private Move move;
 	/**
 	 * The amount involved in this action
 	 * e.g. the amount for 'fold' and 'check' is 0
@@ -49,13 +47,8 @@ public class Action {
 	 * the amount for 'raises $0.50 to $0.80' is 0.8
 	 * the amount for 'posts big blind $0.10' is 0.1
 	 */
-	@Column(name="AMOUNT", precision=5, scale=2)
+	@Column(name="BIG_BLIND", precision=5, scale=2)
 	private BigDecimal amount;
-	
-	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="F_HAND_ID")
-	private Hand hand;
-	
 	/**
 	 * Constructor
 	 * @param playerName
@@ -65,13 +58,12 @@ public class Action {
 		super();
 		validateAction(move, amount);
 		this.player = player;
-		this.move = move.getValue();
+		this.move = move;
 		this.amount = amount;
 	}
 	
 	public Action(){
 	}
-	
 	
 	/**
 	 * Validates an action
@@ -106,7 +98,7 @@ public class Action {
 	 * @return
 	 */
 	public boolean isCall(){
-		return getMove() == Move.CALL;
+		return move == Move.CALL;
 	}
 	
 	/**
@@ -114,7 +106,7 @@ public class Action {
 	 * @return
 	 */
 	public boolean isRaise(){
-		return getMove() == Move.RAISE;
+		return move == Move.RAISE;
 	}
 	
 	/**
@@ -122,7 +114,7 @@ public class Action {
 	 * @return
 	 */
 	public boolean isBet(){
-		return getMove() == Move.BET;
+		return move == Move.BET;
 	}
 	
 	/**
@@ -130,7 +122,7 @@ public class Action {
 	 * @return
 	 */
 	public boolean isFold(){
-		return getMove() == Move.FOLD;
+		return move == Move.FOLD;
 	}
 	
 	/**
@@ -138,7 +130,7 @@ public class Action {
 	 * @return
 	 */
 	public boolean isCheck(){
-		return getMove() == Move.CHECK;
+		return move == Move.CHECK;
 	}
 	
 	/**
@@ -146,7 +138,7 @@ public class Action {
 	 * @return
 	 */
 	public boolean isPost(){
-		return getMove() == Move.POST;
+		return move == Move.POST;
 	}
 	
 	/**
@@ -154,7 +146,7 @@ public class Action {
 	 * @return
 	 */
 	public boolean isUncall(){
-		return getMove() == Move.UNCALL;
+		return move == Move.UNCALL;
 	}
 	
 	/**
@@ -173,45 +165,29 @@ public class Action {
 		return isBet() || isRaise();
 	}
 	
-	/**** Standard getters *****/
-	public Integer getId() {
-		return id;
-	}
-	
-	public void setStreet(Street street) {
-		this.street = street.getValue();
-	}
-
-	public Player getPlayer() {
-		return player;
-	}
-
-	public Move getMove() {
-		return Move.parse(this.move);
-	}
-	
-	public Street getStreet(){
-		return Street.parse(this.street);
-	}
-	
-	public BigDecimal getAmount(){
-		return amount;
-	}
-
-	public Hand getHand() {
-		return hand;
-	}
-
-	public void setHand(Hand hand) {
-		this.hand = hand;
-	}
-	
 	/**
 	 * Returns a String representation of this action
 	 */
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
-		sb.append(player.getName()).append(" ").append(Move.parse(move)).append(" ").append(amount);
+		sb.append(player.getName()).append(" ").append(move).append(" ").append(amount);
 		return sb.toString();
+	}
+	
+	/**** Standard getters *****/
+	
+	public Integer getId() {
+		return id;
+	}
+	
+	public Player getPlayer() {
+		return player;
+	}
+
+	public Move getMove() {
+		return move;
+	}
+	public BigDecimal getAmount(){
+		return amount;
 	}
 }
