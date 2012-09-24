@@ -8,7 +8,7 @@ import org.apache.commons.lang.StringUtils;
  * @author Mingtao Sun
  */
 public enum Move {
-	FOLD {
+	FOLD(100) {
 		@Override
 		public String toString() {
 			return FOLDS_STR;
@@ -18,7 +18,7 @@ public enum Move {
 			return false;
 		}
 	}, 
-	CHECK {
+	CHECK(200) {
 		@Override
 		public String toString() {
 			return CHECKS_STR;
@@ -29,7 +29,7 @@ public enum Move {
 			return false;
 		}
 	}, 
-	BET {
+	BET(300) {
 		@Override
 		public String toString() {
 			return BETS_STR;
@@ -39,7 +39,7 @@ public enum Move {
 			return true;
 		}
 	}, 
-	CALL {
+	CALL(400) {
 		@Override
 		public String toString() {
 			return CALLS_STR;
@@ -49,7 +49,7 @@ public enum Move {
 			return true;
 		}
 	}, 
-	RAISE {
+	RAISE(500) {
 		@Override
 		public String toString() {
 			return RAISES_STR;
@@ -59,7 +59,7 @@ public enum Move {
 			return true;
 		}
 	},
-	POST {
+	POST(600) {
 		@Override
 		public String toString() {
 			return POSTS_STR;
@@ -69,7 +69,7 @@ public enum Move {
 			return true;
 		}
 	},
-	WIN {
+	WIN(700) {
 		@Override
 		public String toString() {
 			return WINS_STR;
@@ -79,7 +79,7 @@ public enum Move {
 			return true;
 		}
 	},
-	UNCALL{
+	UNCALL(800){
 		@Override
 		public String toString() {
 			return UNCALLS_STR;
@@ -89,6 +89,27 @@ public enum Move {
 			return true;
 		}
 	};
+	
+	private int value;
+	
+	private Move(int value){
+		this.value = value;
+	}
+	
+	public int getValue() { 
+		return value; 
+	}
+	
+	public static Move parse(int value){
+		Move result = null;
+		for (Move move : Move.values()){
+			if (move.getValue() == value){
+				result = move;
+				break;
+			}
+		}
+		return result;
+	}
 	
 	private static final String FOLD_STR = "fold";
 	private static final String CHECK_STR = "check";

@@ -7,5 +7,5 @@ import com.smt.poker.persistence.domain.Hand;
 @Repository("handDao")
 public class HandDaoImpl extends GenericDaoImpl<Hand> 
 	implements HandDao {
-
+	
 }
